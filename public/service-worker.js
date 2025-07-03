@@ -100,6 +100,8 @@ async function syncOfflineForms() {
             const res = await fetch("/api/service-worker", {
               method: "POST",
               credentials: "same-origin",
+              headers: {  'Content-Type': 'application/json',
+               },
               body: JSON.stringify(form.formData),
             });
              

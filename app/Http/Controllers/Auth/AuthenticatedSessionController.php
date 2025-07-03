@@ -86,7 +86,6 @@ class AuthenticatedSessionController extends Controller
         return redirect('/');
     }
     public function userStore(Request $request){
-      
         $user = User::create([
             'name'=>$request->username,
             'email'=>$request->email,
